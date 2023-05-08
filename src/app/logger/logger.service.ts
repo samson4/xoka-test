@@ -3,11 +3,19 @@ import {HttpClient,HttpHeaders} from '@angular/common/http'
 import {Observable} from 'rxjs'
 import { Task } from '../Task';
 
+const httpOptions = {
+  headers:new HttpHeaders({
+    'Content-Type':'application/json',
+  })
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class LoggerService {
+  
   private apiUrl = 'http://localhost:3000/data'
+
 
   constructor(private http:HttpClient) { }
 
@@ -18,9 +26,7 @@ export class LoggerService {
     const url=`${this.apiUrl}/${task.id}`
     return this.http.delete<Task>(url)
   }
-  // @todo
-  // createData(task:Task[]):Observable<Task[]>{
-  //   return this.http.post<Task[]>(url)
-  // }
-
+  createData(formdata:any):Observable<any>{
+    return this.http.post<any>(this.apiUrl,formdata,httpOptions)
+  }
 }

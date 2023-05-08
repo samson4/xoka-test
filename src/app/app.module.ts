@@ -16,6 +16,7 @@ import { AddFormComponent } from './add-form/add-form.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {MatInputModule} from '@angular/material/input';
     MatGridListModule,
     MatTableModule,
     MatInputModule,
+    MatChipsModule,
 
     
     

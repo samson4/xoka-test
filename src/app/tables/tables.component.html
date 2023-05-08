@@ -2,28 +2,26 @@
     <table class="table">
         <ng-container >
         <tr>
-          <th >Candidate</th>
+          <th>Candidate</th>
           <mat-divider></mat-divider>
           <b></b>
           <th>Employee</th>
           <mat-divider ></mat-divider>
           <b></b>
-          <th>Depatment</th>
+          <th>Department</th>
           <mat-divider></mat-divider>
           </tr>
         </ng-container>
         <mat-divider></mat-divider>
         <tr *ngFor="let emp of empData">
-          <td >{{emp.text }}</td>
+          <td>{{ emp.text }}</td>
           <mat-divider></mat-divider>
           <td >{{ emp.day}}</td>
           <mat-divider></mat-divider>
-          <td>{{emp.reminder}}</td>
+          <td><mat-chip color="primary">{{ (emp.reminder) }}</mat-chip></td>
           <mat-divider></mat-divider>
           <mat-icon class="trash-icon" color="warn" fontIcon="delete" (click)="deleteData(emp)"></mat-icon>
-        
         </tr>
-        
       </table>
 
 

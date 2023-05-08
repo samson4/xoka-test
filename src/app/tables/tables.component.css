@@ -4,6 +4,10 @@
     cursor: pointer;
   
 }
+.chip{
+    color: white;
+    background-color: crimson;
+}
 
 .table {
     margin: auto;

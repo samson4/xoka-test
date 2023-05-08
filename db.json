@@ -25,8 +25,8 @@
       "reminder": false
     },
     {
-      "text": "what is 2's complement",
-      "day": "may 2nd 2022",
+      "text": "what is 1's complement",
+      "day": "may 1nd 2021",
       "reminder": true,
       "id": 5
     }

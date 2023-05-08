@@ -16,7 +16,10 @@ export class AppComponent implements OnInit {
   }
   ngOnInit(): void {
     this.loggerService.fetchData().subscribe(data=>this.data=data)
-    
+  }
+  addFormData(value:any){
+    // this.data.push(value)
+    location.reload()
   }
 }
 
