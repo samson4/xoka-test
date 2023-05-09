@@ -22,11 +22,26 @@ export class LoggerService {
   fetchData():Observable<Task[]>{
      return this.http.get<Task[]>(this.apiUrl)
   }
-  deleteData(task:Task):Observable<Task>{
-    const url=`${this.apiUrl}/${task.id}`
+  deleteData(data:Task):Observable<Task>{
+    const url=`${this.apiUrl}/${data.id}`
     return this.http.delete<Task>(url)
   }
   createData(formdata:any):Observable<any>{
     return this.http.post<any>(this.apiUrl,formdata,httpOptions)
+  }
+  toggleActive(emp:any):Observable<any>{
+    const url=`${this.apiUrl}/${emp.id}`
+    const data = {
+      "id": emp.id,
+      "company":emp.company ,
+      "employee":emp.employee ,
+      "dept":emp.dept ,
+      "salary":emp.salary ,
+      "status": !emp.status,
+      "manager": emp.manager
+    }
+  
+    console.log(url,data)
+    return this.http.put<any>(url,emp,httpOptions)
   }
 }

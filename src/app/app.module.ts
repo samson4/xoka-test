@@ -17,13 +17,16 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatChipsModule} from '@angular/material/chips';
+import {MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     TablesComponent,
-    AddFormComponent
+    AddFormComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,8 @@ import {MatChipsModule} from '@angular/material/chips';
     MatTableModule,
     MatInputModule,
     MatChipsModule,
+    MatCardModule,
+    MatCheckboxModule,
 
     
     

@@ -1,4 +1,4 @@
-<ng-container >
+<!-- <ng-container>
     <table class="table">
         <ng-container >
         <tr>
@@ -14,42 +14,41 @@
         </ng-container>
         <mat-divider></mat-divider>
         <tr *ngFor="let emp of empData">
-          <td>{{ emp.text }}</td>
+          
           <mat-divider></mat-divider>
-          <td >{{ emp.day}}</td>
+          <td >{{ emp.dept}}</td>
           <mat-divider></mat-divider>
-          <td><mat-chip color="primary">{{ (emp.reminder) }}</mat-chip></td>
+          <td><mat-chip color="primary">{{ (emp.dept) }}</mat-chip></td>
           <mat-divider></mat-divider>
           <mat-icon class="trash-icon" color="warn" fontIcon="delete" (click)="deleteData(emp)"></mat-icon>
         </tr>
-      </table>
-
-
+      </table> -->
+<mat-card>
+    <mat-card-content class="detail-card">Emloyee Information Details</mat-card-content>
+</mat-card>
+<ng-container class="top">
     <table class="content-table">
         <thead>
             <tr>
-                <th>Candidate</th>
+                <th>Company</th>
                 <th>Employee</th>
                 <th>Department</th>
+                <th>Role</th>
+                <th>Salary</th>
+                <th>Active</th>
+                <th><mat-icon>more_vert</mat-icon></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody *ngFor="let emp of empData">
             <tr>
-                <td>hi</td>
-                <td>hi</td>
-                <td>hi</td>
+                <td>{{emp.company}}</td>
                 
-            </tr>
-            <tr>
-                <td>hi</td>
-                <td>hi</td>
-                <td>hi</td>
-                
-            </tr>
-            <tr>
-                <td>hi</td>
-                <td>hi</td>
-                <td>hi</td>
+                <td>{{ emp.employee }}</td>
+                <td>{{emp.dept}}</td>
+                <td>{{emp.manager}}</td>
+                <td><mat-chip color="primary">{{ emp.salary }}</mat-chip></td>
+                <td><mat-slide-toggle (click)="toggleStatus(emp)" [(ngModel)]="emp.status" ></mat-slide-toggle></td>
+                <td><mat-icon class="trash-icon" color="warn" fontIcon="delete" (click)="deleteData(emp)"></mat-icon></td>
             </tr>
         </tbody>
     </table>

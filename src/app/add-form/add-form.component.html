@@ -1,18 +1,54 @@
+<div class="form-container">
+<mat-card>
+  <mat-card-content class="detail-card">Add Emloyee Details <mat-icon (click)="showForm()" class="add-icon">add_circle</mat-icon></mat-card-content>
+</mat-card>
+
 <form (ngSubmit)="onSubmit()"  class="example-form">
+  <ng-template [ngIf]="ShowForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Company</mat-label>
+      <input  matInput placeholder="Ex. Pizza" id="Company" name="Company" [(ngModel)]="company" required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Employee</mat-label>
+        <input  matInput placeholder="Employee Name " id="emp" name="emp" [(ngModel)]="employee" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Department</mat-label>
+        <input  matInput placeholder="Department" id="dept" name="dept" [(ngModel)]="dept" required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Salary</mat-label>
+        <input type="number" matInput placeholder="Salary" id="salary" name="salary" [(ngModel)]="salary" required>
+      </mat-form-field>
+      <mat-checkbox class="example-margin" (click)="toggleActive()">Active</mat-checkbox>
+      <ng-template [ngIf]="errors">
+        <div>
+          <h3 class="errors">{{errors}}</h3>
+        </div>
+      </ng-template>
+      <mat-divider></mat-divider>
+      <br>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </ng-template>
+    </form>
+</div>
+  
+
+
+<!-- <form (ngSubmit)="onSubmit()"  class="example-form">
     <div class="form-control">
         <label for="text">Task</label>
         <input type="text" id="text" name="text" [(ngModel)]="text" >
     </div>
     <div class="form-control">
-        <label for="dat">Day an Time</label>
+        <label for="dat">Day and Time</label>
         <input type="text" id="day" name="day" [(ngModel)]="day">
     </div>
     <div class="form-control form-control-check">
         <label for="reminder">Set Reminder</label>
         <input type="checkbox" id="reminder" name="reminder" [(ngModel)]="reminder">
     </div>
-    <input type="submit" value="Save task" raised color="primary">
-   {{text}}
-{{day}}
-{{reminder}}
-</form>
+    <input type="submit" value="Save task" raised color="primary"> 
+</form> -->
+

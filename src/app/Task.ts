@@ -1,6 +1,9 @@
 export interface Task {
     id?:number;
-    text:string;
-    day:string;
-    reminder:boolean;
+    company:string;
+    employee:string;
+    dept:string;
+    salary:number;
+    status:boolean;
+    manager:boolean;
 }

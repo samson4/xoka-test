@@ -9,6 +9,7 @@ import { Task } from '../Task';
 export class TablesComponent {
   title = 'test';
   empData:Task[] = [];
+  isChecked:Boolean=false
   
   // loggerService = LoggerService
   constructor(private loggerService : LoggerService){
@@ -20,5 +21,8 @@ export class TablesComponent {
   }
   deleteData(task:Task){
     this.loggerService.deleteData(task).subscribe(()=>this.empData= this.empData.filter(emp=>emp.id !== task.id))
+  }
+  toggleStatus(emp:Task){
+    this.loggerService.toggleActive(emp).subscribe()
   }
 }
