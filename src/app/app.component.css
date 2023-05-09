@@ -1,4 +1,8 @@
-
+.detail-card{
+  background-color: #dddddd;
+  text-align: center;
+  font-size: 24px ;
+}
 .top-container{
   font-family: arial;
   font-size: 24px;

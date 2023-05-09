@@ -44,4 +44,8 @@ export class LoggerService {
     console.log(url,data)
     return this.http.put<any>(url,emp,httpOptions)
   }
+  updateEmployeeData(emp:any):Observable<any>{
+    const url=`${this.apiUrl}/${emp.id}`
+    return this.http.put<any>(url,emp,httpOptions)
+  }
 }

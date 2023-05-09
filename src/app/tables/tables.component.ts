@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit,Output,EventEmitter } from '@angular/core';
 import { LoggerService } from '../logger/logger.service';
 import { Task } from '../Task';
 @Component({
@@ -10,7 +10,8 @@ export class TablesComponent {
   title = 'test';
   empData:Task[] = [];
   isChecked:Boolean=false
-  
+  @Output() onFormUpdate:EventEmitter<any> = new EventEmitter()
+
   // loggerService = LoggerService
   constructor(private loggerService : LoggerService){
 
@@ -25,4 +26,8 @@ export class TablesComponent {
   toggleStatus(emp:Task){
     this.loggerService.toggleActive(emp).subscribe()
   }
+  updateEmployee(emp:any){
+    this.onFormUpdate.emit(emp)
+  }
+  
 }

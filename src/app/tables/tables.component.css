@@ -5,6 +5,9 @@
 .trash-icon{
     cursor: pointer;
 }
+.edit-icon{
+    cursor: pointer;
+}
 .chip{
     color: white;
     background-color: crimson;

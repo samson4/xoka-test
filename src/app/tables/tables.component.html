@@ -24,7 +24,7 @@
         </tr>
       </table> -->
 <mat-card>
-    <mat-card-content class="detail-card">Emloyee Information Details</mat-card-content>
+    <mat-card-content class="detail-card">Emloyee Information Details<mat-icon>assignment</mat-icon></mat-card-content>
 </mat-card>
 <ng-container class="top">
     <table class="content-table">
@@ -33,9 +33,10 @@
                 <th>Company</th>
                 <th>Employee</th>
                 <th>Department</th>
-                <th>Role</th>
+                
                 <th>Salary</th>
                 <th>Active</th>
+                <th></th>
                 <th><mat-icon>more_vert</mat-icon></th>
             </tr>
         </thead>
@@ -45,9 +46,10 @@
                 
                 <td>{{ emp.employee }}</td>
                 <td>{{emp.dept}}</td>
-                <td>{{emp.manager}}</td>
+               
                 <td><mat-chip color="primary">{{ emp.salary }}</mat-chip></td>
-                <td><mat-slide-toggle (click)="toggleStatus(emp)" [(ngModel)]="emp.status" ></mat-slide-toggle></td>
+                <td><mat-slide-toggle color="indigo" (click)="toggleStatus(emp)" [(ngModel)]="emp.status" ></mat-slide-toggle></td>
+                <td><mat-icon class="edit-icon" (click)="updateEmployee(emp)">edit</mat-icon></td>
                 <td><mat-icon class="trash-icon" color="warn" fontIcon="delete" (click)="deleteData(emp)"></mat-icon></td>
             </tr>
         </tbody>

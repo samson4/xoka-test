@@ -1,22 +1,12 @@
 {
   "data": [
     {
-      "id": 1,
-      "company": "Doctors Pharmacy",
-      "employee": "Frank lucas",
-      "dept": "pharmaceuticals",
-      "salary": 15000,
-      "status": false,
-      "manager": false
-    },
-    {
       "id": 2,
       "company": "Private",
       "employee": "Iceberg Slim",
       "dept": "Management",
       "salary": 15000,
-      "status": true,
-      "manager": false
+      "status": true
     },
     {
       "id": 3,
@@ -24,8 +14,7 @@
       "employee": "Frank lucas",
       "dept": "pharmaceuticals",
       "salary": 15000,
-      "status": true,
-      "manager": false
+      "status": true
     },
     {
       "id": 4,
@@ -33,35 +22,30 @@
       "employee": "Iceberg Slim",
       "dept": "Management",
       "salary": 15000,
-      "status": false,
-      "manager": false
+      "status": true
     },
     {
+      "id": 7,
       "company": "Amazon",
       "employee": "samson kebede",
       "dept": "IT",
-      "salary": 20000,
-      "manager": false,
-      "status": true,
-      "id": 7
+      "salary": 25000,
+      "status": true
     },
     {
       "company": "Private",
       "employee": "Frank White",
       "dept": "Finance",
       "salary": 15000,
-      "manager": false,
       "status": true,
       "id": 8
     },
     {
-      "company": "Private",
-      "employee": "samson kebede",
-      "dept": "IT",
-      "salary": 20000,
-      "manager": false,
-      "status": true,
-      "id": 9
+      "id": 10,
+      "company": "Emebet",
+      "employee": "Tegenaw",
+      "dept": "Management",
+      "salary": 30000
     }
   ]
 }
