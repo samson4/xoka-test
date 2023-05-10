@@ -9,6 +9,7 @@ import { Task } from './Task';
 export class AppComponent implements OnInit {
   title = 'test';
   data:Task[] = [];
+  disabled:boolean=true
   id:number=0
   company:string=''
   dept:string=''
@@ -30,26 +31,37 @@ export class AppComponent implements OnInit {
     location.reload()
   }
   updateEmployee(){
-    const formdata = {
-      "id":this.id,
-      "company":this.company,
-      "employee":this.employee,
-      "dept":this.dept,
-      "salary":this.salary,
-      "status":this.status
+    try {
+        const formdata = {
+          "id":this.id,
+          "company":this.company,
+          "employee":this.employee,
+          "dept":this.dept,
+          "salary":this.salary,
+          "status":this.status
+        }
+        this.loggerService.updateEmployeeData(formdata).subscribe((value)=>{
+          location.reload()
+          alert('Employee updated')
+        })
+      
+      
+    } catch (error) {
+      console.log(error)
     }
-    this.loggerService.updateEmployeeData(formdata).subscribe((value)=>{
-      location.reload()
-      alert('Employee updated')
-    })
+    
+   
   }
   updateFormData(emp:any){
-    this.id = emp.id
-    this.company=emp.company
-    this.dept=emp.dept
-    this.employee=emp.employee
-    this.salary=emp.salary
-    this.status = emp.status
+    
+      this.id = emp.id
+      this.company=emp.company
+      this.dept=emp.dept
+      this.employee=emp.employee
+      this.salary=emp.salary
+      this.status = emp.status
+      this.disabled = false
+    
   }
 }
 

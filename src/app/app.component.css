@@ -2,6 +2,10 @@
   background-color: #dddddd;
   text-align: center;
   font-size: 24px ;
+  margin: 25px;
+  padding: 6px;
+  border-radius: 4px;
+  max-height:120px ;
 }
 .top-container{
   font-family: arial;
@@ -9,5 +13,9 @@
   margin: 25px;
   width: auto;
   justify-content: space-around;
-  
+}
+.container{
+  margin-left: 50px;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }

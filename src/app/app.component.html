@@ -3,38 +3,42 @@
 
 <app-tables (onFormUpdate)="updateFormData($event)"></app-tables>
 </div>
-<mat-divider></mat-divider>
-<app-add-form (onFormSubmit)="addFormData($event)"> </app-add-form>
-<mat-divider></mat-divider>
+
 <div>
     <mat-card-content class="detail-card">Edit Emloyee Details <mat-icon class="add-icon">edit</mat-icon></mat-card-content>
     <mat-divider></mat-divider>
-    <div class="top-container">
+    <div class="container">
         <form (ngSubmit)="updateEmployee()"  class="example-form">
             
               <mat-form-field class="example-full-width">
                 <mat-label>Company</mat-label>
                 <input  matInput placeholder="Ex. Pizza" id="Company" name="Company" [(ngModel)]="company" required>
               </mat-form-field>
+              <mat-divider></mat-divider>
               <mat-form-field class="example-full-width">
                   <mat-label>Employee</mat-label>
                   <input  matInput placeholder="Employee Name " id="emp" name="emp" [(ngModel)]="employee" required>
                 </mat-form-field>
+                <mat-divider></mat-divider>
                 <mat-form-field class="example-full-width">
                   <mat-label>Department</mat-label>
                   <input  matInput placeholder="Department" id="dept" name="dept" [(ngModel)]="dept" required>
                 </mat-form-field>
+                <mat-divider></mat-divider>
                 <mat-form-field class="example-full-width">
                   <mat-label>Salary</mat-label>
                   <input type="number" matInput placeholder="Salary" id="salary" name="salary" [(ngModel)]="salary" required>
                 </mat-form-field>
                 
                 <br>
-                <button mat-raised-button color="primary" type="submit">Update</button>
+                <button mat-raised-button color="primary" type="submit" [disabled]="disabled">Update</button>
               
               </form>
     </div>
 </div>
+<mat-divider></mat-divider>
+<app-add-form class="add-form" (onFormSubmit)="addFormData($event)"> </app-add-form>
+<mat-divider></mat-divider>
 
 
 
