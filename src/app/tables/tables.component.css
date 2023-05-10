@@ -8,6 +8,11 @@
 .edit-icon{
     cursor: pointer;
 }
+.list-icon{
+   
+    padding-top: 8px ;
+    padding-right: 6px;
+  }
 .chip{
     color: white;
     background-color: crimson;
